@@ -210,6 +210,8 @@ def build_latest_summary(records: list[Record],
             "commit_sha": latest.get("commit_sha"),
             **record_metadata(latest),
             **record_comparison_metadata(latest),
+            "hardware_profile": latest.get("hardware_profile"),
+            "software_profile": latest.get("software_profile"),
             "success": success,
             "baseline_n": len(baseline_records),
             "worst_regression_pct": worst_regression,
@@ -248,6 +250,8 @@ def build_trends(records: list[Record]) -> list[Record]:
             "model_id": model_id,
             "gpu_type": gpu_type,
             **record_comparison_metadata(latest),
+            "hardware_profile": latest.get("hardware_profile"),
+            "software_profile": latest.get("software_profile"),
             "points": points,
         })
     return sorted(trends, key=comparison_sort_key)
