@@ -24,7 +24,7 @@ from huggingface_hub.constants import ENDPOINT
 # Configuration — read once at import time, shared across both consumers
 # ---------------------------------------------------------------------------
 
-HF_REPO_ID: str = os.environ.get("HF_REPO_ID", "FastVideo/performance-tracking")
+HF_REPO_ID: str = os.environ.get("HF_REPO_ID", "hao-ai-lab/performance-tracking")
 HF_TOKEN_ENV_VARS = ("HF_API_KEY", "HUGGINGFACE_HUB_TOKEN", "HF_TOKEN")
 SYNC_MARKER = ".hf_sync_complete"
 SYNC_REUSE_TTL_SECONDS = int(os.environ.get("PERFORMANCE_TRACKING_SYNC_REUSE_TTL_SECONDS", "3600"))
