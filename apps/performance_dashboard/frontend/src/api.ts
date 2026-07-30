@@ -22,6 +22,8 @@ export type ComparisonCohort = {
   recipe_fingerprint: CohortValue;
   hardware_profile_id: CohortValue;
   software_profile_id: CohortValue;
+  hardware_profile?: Record<string, any>;
+  software_profile?: Record<string, any>;
 };
 
 export type SummaryRow = {
